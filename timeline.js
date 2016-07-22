@@ -1,5 +1,5 @@
 //Retrieving the Esty API data
-fetch('https://2af14e96.ngrok.io/chirps')
+fetch('#')
 
 //Parsing the data
 .then(function(response) {
