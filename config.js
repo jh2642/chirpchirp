@@ -1,39 +1,53 @@
 // API Host
 //var api = 'http://.herokuapp.com'
 var api = 'https://923ad329.ngrok.io'
-var token = sessionStorage.getItem('token')
+var tokenId = 'api_token'
+var token = sessionStorage.getItem(tokenId)
 
 // Utilities
 // endpoint ... /users
 // formFields ... {name: 'Joe'}
-function fetchApi(endpoint, formFields, callback) {
+function fetchApi(method, endpoint, formFields, callback) {
+  var statusCode,
+      payload
+
+  if (method === undefined) {
+    method = 'POST'
+  }
+
   if (formFields === undefined || formFields === null || formFields === '') {
     formFields = {}
   }
 
-  formFields.token = token
+  formFields[tokenId] = token
 
-  fetch(api + endpoint, {
-    method: 'POST',
+  payload = {
+    method: method,
     headers: {
       'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formFields)
-  })
+    }
+  }
+
+  if (method.toUpperCase() === 'POST') {
+	   payload.body = JSON.stringify(formFields)
+  }
+
+  fetch(api + endpoint, payload)
     .then(function(response) {
+	     statusCode = response.status
       return response.json()
     })
     .then(function(data) {
-      callback(data)
+      callback(data, statusCode)
     })
 }
 
 function saveToken(token) {
-  sessionStorage.setItem('token', token)
+  sessionStorage.setItem(tokenId, token)
 }
 
 function destroyToken() {
-  sessionStorage.removeItem('token')
+  sessionStorage.removeItem(tokenId)
 }
 
 function redirect(url) {

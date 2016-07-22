@@ -1,8 +1,8 @@
 module.exports = {
-  entry: './config.js',
+  entry: './timeline.js',
   output: {
     path: './',
-    filename: 'main.bundle.js',
+    filename: 'timeline.bundle.js',
   },
   devServer: {
     inline: true,

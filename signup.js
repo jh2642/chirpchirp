@@ -6,9 +6,10 @@ document.getElementById('btnSignup').addEventListener('click', function() {
         userpic: document.getElementById('userpic').value
     }
 
-    fetchApi('/users', formFields, function(response) {
+    fetchApi('POST', '/users', formFields, function(response) {
+        // console.log(response)
 //something like response.user.token, it might not be exactly that
-        saveToken(response.user.token)
+        saveToken(response.api_token)
         redirect('/timeline.html')
     })
 })

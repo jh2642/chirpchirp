@@ -1,1 +1,44 @@
-LOGIN!!!!
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Chirp Chirp Login</title>
+    <meta name="description" content="Login!">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="signup.css"> -->
+
+</head>
+
+<body>
+  <div class="container">
+
+    <form method="post" action="#">
+
+        <div class="signinInputArea text-center">
+            <div class="form-group">
+                <label for="name">name</label>
+                <input type="text" class="form-control" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+                <label for="password">password</label>
+                <input type="text" class="form-control" id="password" name="password" required />
+            </div>
+
+            <button type="button" id="btnSignin" class="btn btn-success btn-block">get yo chirp on!</button>
+        </div>
+        <div id="errorMessage">
+
+        </div>
+
+    </form>
+    </div>
+    <script src="config.js"></script>
+    <script src="login.js"></script>
+
+</body>
+</html>
