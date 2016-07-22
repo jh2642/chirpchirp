@@ -11,7 +11,7 @@ class Timeline extends React.Component {
 
     render() {
         var chirps = this.state.chirps.map((chirp, i) => {
-            return <li key={i}>{chirp.title}{chirp.body}</li>
+            return <div key={i}><img src={chirp.user.userpic} />, {chirp.user.name}, {chirp.title}, {chirp.body}</div>
         })
 
         return <div>

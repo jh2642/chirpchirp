@@ -7,6 +7,7 @@ var token = sessionStorage.getItem(tokenId)
 // Utilities
 // endpoint ... /users
 // formFields ... {name: 'Joe'}
+
 function fetchApi(method, endpoint, formFields, callback) {
   var statusCode,
       payload
@@ -19,8 +20,6 @@ function fetchApi(method, endpoint, formFields, callback) {
     formFields = {}
   }
 
-  formFields[tokenId] = token
-
   payload = {
     method: method,
     headers: {
@@ -29,7 +28,11 @@ function fetchApi(method, endpoint, formFields, callback) {
   }
 
   if (method.toUpperCase() === 'POST') {
-	   payload.body = JSON.stringify(formFields)
+    formFields[tokenId] = token
+	  payload.body = JSON.stringify(formFields)
+  }
+  else {
+    endpoint += '?' + tokenId + '=' + encodeURIComponent(token)
   }
 
   fetch(api + endpoint, payload)
