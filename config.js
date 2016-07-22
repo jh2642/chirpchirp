@@ -2,7 +2,7 @@
 //var api = 'http://.herokuapp.com'
 var api = 'https://923ad329.ngrok.io'
 var token = sessionStorage.getItem('token')
-​
+
 // Utilities
 // endpoint ... /users
 // formFields ... {name: 'Joe'}
@@ -10,9 +10,9 @@ function fetchApi(endpoint, formFields, callback) {
   if (formFields === undefined || formFields === null || formFields === '') {
     formFields = {}
   }
-​
+
   formFields.token = token
-​
+
   fetch(api + endpoint, {
     method: 'POST',
     headers: {
@@ -27,15 +27,15 @@ function fetchApi(endpoint, formFields, callback) {
       callback(data)
     })
 }
-​
+
 function saveToken(token) {
   sessionStorage.setItem('token', token)
 }
-​
+
 function destroyToken() {
   sessionStorage.removeItem('token')
 }
-​
+
 function redirect(url) {
   window.location.href = url
 }
