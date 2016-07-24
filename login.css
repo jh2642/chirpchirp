@@ -1,10 +1,5 @@
-.logo {
-    width: 65px;
-    margin: 25px 35px;
-}
-
-.login {
-    margin: -95px 25px 20px;
+.signup {
+    margin: 20px 25px;
     font-size: 20px;
     color: #3288c7;
 }
@@ -13,32 +8,30 @@ a:hover {
     color: #6eb4e7;
 }
 
-h1 {
-    font-size: 120px;
-    color: #3288c7;
-    margin: 90px 0px 0px;
-    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
-}
-
-.signupInputArea {
+.loginInputArea {
     width: 30%;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 115px;
 }
 
-.signupInputArea input {
+.loginInputArea .logo {
+    width: 100px;
+    margin-bottom: 37px;
+}
+
+.loginInputArea input {
     background-color: transparent;
     color: white;
     font-size: 18px;
     text-align: center;
 }
 
-.signupInputArea label {
+.loginInputArea label {
     color: white;
     font-size: 18px;
 }
 
-.signupInputArea button {
+.loginInputArea button {
     width: 250px;
     margin: auto;
     margin-top: 50px;
@@ -46,9 +39,10 @@ h1 {
     font-weight: 700;
     background-color: rgba(0, 155, 222, 0.75);
     color: white;
+    border: 1px solid white;
 }
 
-.signupInputArea button:hover {
+.loginInputArea button:hover {
     background-color: transparent;
     font-size: 20px;
     color: #009bde;
