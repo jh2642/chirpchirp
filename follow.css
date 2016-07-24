@@ -1,0 +1,33 @@
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.btn {
+  width: 100px;
+  background-color: #3288c7;
+  text-align: center;
+}
+
+.followProfile {
+  margin-top: 20px;
+}
+
+.thumbnail {
+  padding-top: 25px;
+  background-color: transparent;
+  border: none;
+}
+
+.caption {
+  padding-top: 25px;
+}
+
+.caption h3 {
+  color: #ffb819;
+  font-weight: bolder;
+}
+
+#follow-me {
+  color: #ffb819;
+  font-weight: bolder;
+}

@@ -1,0 +1,36 @@
+$lightBlue: rgb(110, 180, 231);
+$mediumBlue: rgb(0, 155, 222);
+$darkBlue: rgb(50, 136, 199);
+$gold: rgb(255, 184, 25);
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.btn {
+  width: 100px;
+  background-color: $darkBlue;
+  text-align: center;
+}
+
+.followProfile {
+  margin-top: 20px;
+}
+
+.thumbnail {
+  padding-top: 25px;
+  background-color: transparent;
+  border: none;
+}
+
+.caption{
+  padding-top : 25px;
+  h3 {
+    color: $gold;
+    font-weight: bolder;
+  }
+}
+#follow-me {
+  color: $gold;
+  font-weight: bolder;  
+}
